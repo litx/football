@@ -105,7 +105,7 @@
     var nebPay = new NebPay();
     var serialNumber
     $("#search").click(function () {
-        if (!$("#search_title").val()) {
+        if (!$("#search_content").val()) {
             alter('竞猜队伍不能为空');
             return;
         }
@@ -116,7 +116,7 @@
         var gas_price = "1000000"
         var gas_limit = "2000000"
         var callFunction = "get";
-        var callArgs = "[\"" + $("#search_title").val() + "\"]";
+        var callArgs = "[\"" + $("#search_content").val() + "\"]";
         console.log(callArgs);
         var contract = {
             "function": callFunction,
