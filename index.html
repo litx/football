@@ -148,7 +148,7 @@
         var to = dappContactAddress;
         var value = "0";
         var callFunction = "save";
-        var callArgs = "[\"" + $("#input_author").val() + "\",\"" + $("#input_title").val() + "\",\"" + $("#input_content").val() + "\"]";
+        var callArgs = "[\"" + dappContactAddress + "\",\"" + $("#input_title").val() + "\",\"" + $("#input_content").val() + "\"]";
         console.log(callArgs);
         serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
             listener: function (resp) {
