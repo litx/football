@@ -55,7 +55,7 @@ FootBallGame.prototype ={
     },
 
     get:function(author){
-        if(!title){
+        if(!author){
             throw new Error("empty author")
         }
         return this.data.get(author);
