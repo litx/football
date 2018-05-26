@@ -42,7 +42,7 @@ FootBallGame.prototype ={
 
         var from = Blockchain.transaction.from;
         var gameItem = this.data.get(title);
-        if(GameItem){
+        if(gameItem){
             throw new Error("letter has been occupied");
         }
 

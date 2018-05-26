@@ -134,7 +134,7 @@
             console.log(result);
             result = JSON.parse(result);
             $("#title").text(result.title);
-            $('#content').text("正文:  " + result.content);
+            $('#content').text("比赛结果:  " + result.content);
             $('#author').text("作者：" + result.author);
         }).catch(function (err) {
             console.log("error :" + err.message);
