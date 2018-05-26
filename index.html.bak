@@ -133,8 +133,8 @@
             }
             console.log(result);
             result = JSON.parse(result);
-            $("#title").text(result.title);
-            $('#content').text("比赛结果，胜利者：" + result.content);
+            $("#title").text("比赛结果，胜利者：" + result.title);
+            $('#content').text("比赛比分：        " + result.content);
             $('#author').text("竞猜者：" + result.author);
         }).catch(function (err) {
             console.log("error :" + err.message);
