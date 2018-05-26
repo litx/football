@@ -49,7 +49,7 @@ FootBallGame.prototype ={
         gameItem = new GameItem();
         gameItem.author = from;
         gameItem.title = title;
-        gameItem.title = content;
+        gameItem.content = content;
 
         this.data.put(content,gameItem);
     },
