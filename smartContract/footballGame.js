@@ -41,15 +41,15 @@ FootBallGame.prototype ={
         }
 
         var from = Blockchain.transaction.from;
-        var GameItem = this.data.get(title);
+        var gameItem = this.data.get(title);
         if(GameItem){
             throw new Error("letter has been occupied");
         }
 
-        GameItem = new GameItem();
-        GameItem.author = from;
-        GameItem.title = title;
-        GameItem.content = content;
+        gameItem = new GameItem();
+        gameItem.author = from;
+        gameItem.title = title;
+        gameItem.content = content;
 
         this.data.put(title,GameItem);
     },
