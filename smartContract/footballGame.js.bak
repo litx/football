@@ -51,7 +51,7 @@ FootBallGame.prototype ={
         gameItem.title = title;
         gameItem.content = content;
 
-        this.data.put(title,gameItem);
+        this.data.put(content,gameItem);
     },
 
     get:function(author){
