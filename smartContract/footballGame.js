@@ -1,6 +1,6 @@
 'use strict'
 
-var LetterItem = function(text){
+var GameItem = function(text){
     if(text){
         var obj = JSON.parse(text);
         this.title = obj.title;
@@ -9,16 +9,16 @@ var LetterItem = function(text){
     }
 };
 
-LetterItem.prototype = {
+GameItem.prototype = {
     toString : function(){
         return JSON.stringify(this)
     }
 };
 
-var TheLetter = function () {
+var FootBallGame = function () {
     LocalContractStorage.defineMapProperty(this, "data", {
         parse: function (text) {
-            return new LetterItem(text);
+            return new GameItem(text);
         },
         stringify: function (o) {
             return o.toString();
@@ -26,7 +26,7 @@ var TheLetter = function () {
     });
 };
 
-TheLetter.prototype ={
+FootBallGame.prototype ={
     init:function(){
 
     },
@@ -41,17 +41,17 @@ TheLetter.prototype ={
         }
 
         var from = Blockchain.transaction.from;
-        var letterItem = this.data.get(title);
-        if(letterItem){
+        var GameItem = this.data.get(title);
+        if(GameItem){
             throw new Error("letter has been occupied");
         }
 
-        letterItem = new LetterItem();
-        letterItem.author = from;
-        letterItem.title = title;
-        letterItem.content = content;
+        GameItem = new GameItem();
+        GameItem.author = from;
+        GameItem.title = title;
+        GameItem.content = content;
 
-        this.data.put(title,letterItem);
+        this.data.put(title,GameItem);
     },
 
     get:function(title){
@@ -62,4 +62,4 @@ TheLetter.prototype ={
     }
 }
 
-module.exports = TheLetter;
+module.exports = FootBallGame;
