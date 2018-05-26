@@ -38,7 +38,7 @@
                     </div>
 
                 <div class="input-group col-md-3" style="margin-top:20p;margin-left:20px">
-                    <input type="text" class="form-control" placeholder="请输入竞猜队伍名称" id=search_title />
+                    <input type="text" class="form-control" placeholder="请输入竞猜者名称" id=search_author />
                     <span class="input-group-btn">
                         <button class="btn btn-info btn-search" id=search>查找</button>
 
@@ -134,8 +134,8 @@
             console.log(result);
             result = JSON.parse(result);
             $("#title").text(result.title);
-            $('#content').text("比赛结果:  " + result.content);
-            $('#author').text("作者：" + result.author);
+            $('#content').text("比赛结果，胜利者：" + result.content);
+            $('#author').text("竞猜者：" + result.author);
         }).catch(function (err) {
             console.log("error :" + err.message);
         })
