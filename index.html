@@ -38,7 +38,7 @@
                     </div>
 
                 <div class="input-group col-md-3" style="margin-top:20p;margin-left:20px">
-                    <input type="text" class="form-control" placeholder="请输入竞猜者名称" id=search_author />
+                    <input type="text" class="form-control" placeholder="请输入竞猜者名称" id=search_title />
                     <span class="input-group-btn">
                         <button class="btn btn-info btn-search" id=search>查找</button>
 
@@ -105,7 +105,7 @@
     var nebPay = new NebPay();
     var serialNumber;
     $("#search").click(function () {
-        if (!$("#search_content").val()) {
+        if (!$("#search_title").val()) {
             alter('竞猜队伍不能为空');
             return;
         }
@@ -116,7 +116,7 @@
         var gas_price = "1000000"
         var gas_limit = "2000000"
         var callFunction = "get";
-        var callArgs = "[\"" + $("#search_content").val() + "\"]";
+        var callArgs = "[\"" + $("#search_title").val() + "\"]";
         console.log(callArgs);
         var contract = {
             "function": callFunction,
