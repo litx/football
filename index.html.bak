@@ -98,7 +98,7 @@
 
 <script>
     "use strict";
-    var dappContactAddress = "n1zqWqaymvTJi8X98FixectkuwTNe6tRxSc";
+    var dappContactAddress = "n1fB1w5BnLoF3YiuAGFhcQQ8reM9WR9NpWo";
     var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
     neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"))
     var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
