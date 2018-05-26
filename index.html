@@ -98,14 +98,14 @@
 
 <script>
     "use strict";
-    var dappContactAddress = "n1kTHJut97G6y3Fxm1xfeWhrk8H77KogX8D";
+    var dappContactAddress = "n1gbTNDJWZH6Nrd8NqPPBdg1aFRJ5MHwQkh";
     var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
     neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"))
     var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
     var nebPay = new NebPay();
     var serialNumber
     $("#search").click(function () {
-        if (!$("#search_author").val()) {
+        if (!$("#search_title").val()) {
             alter('竞猜队伍不能为空');
             return;
         }
@@ -116,7 +116,7 @@
         var gas_price = "1000000"
         var gas_limit = "2000000"
         var callFunction = "get";
-        var callArgs = "[\"" + $("#search_author").val() + "\"]";
+        var callArgs = "[\"" + $("#search_title").val() + "\"]";
         console.log(callArgs);
         var contract = {
             "function": callFunction,
