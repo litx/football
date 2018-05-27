@@ -51,7 +51,7 @@ FootBallGame.prototype ={
         gameItem.title = title;
         gameItem.content = content;
 
-        this.data.put(content,gameItem);
+        this.data.put(title,gameItem);
     },
 
     get:function(title){
