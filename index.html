@@ -26,24 +26,7 @@
                     <h1>世界杯竞猜</h1>
                 </div>
 
-                <div class="container-fluid">
-                        <div class="row-fluid">
-                            <div class="span12">
-                                 <span class="label">分隔符</span>
-                                <div class="list-group">
-                                    <a class="list-group-item active">查询竞猜结果</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                <div class="input-group col-md-3" style="margin-top:20p;margin-left:20px">
-                    <input type="text" class="form-control" placeholder="请输入竞猜者名称" id=search_title />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-search" id=search>查找</button>
-
-                    </span>
-                </div>
 
 
 
@@ -68,24 +51,42 @@
                         <div class="span12">
                              <span class="label">分隔符</span>
                             <div class="list-group">
-                                <a class="list-group-item active">立即竞猜 2002.6.8 19:30  巴西 VS 中国</a>
+                                <a class="list-group-item active">立即竞猜 2018年6月14日(周四) 俄罗斯-沙特 埃及-乌拉圭 摩洛哥-伊朗</a>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
 
             <div class="input-group" style="margin-left:20px">
-                <span class="input-group-addon">竞猜取胜队伍名称</span>
-                <input type="text" class="form-control" placeholder="输入竞猜取胜队伍名称" id=input_title>
+                <span class="input-group-addon">竞猜比赛</span>
+                <input type="text" class="form-control" placeholder="输入竞猜比赛" id=input_title>
             </div>
             <div class="input-group" style="margin-top:20px ;margin-left:20px">
                 <span class="input-group-addon">比赛结果</span>
-                <input type="text" class="form-control" placeholder="输入比分" id=input_content>
+                <input type="text" class="form-control" placeholder="输入结果" id=input_content>
             </div>
             <div  style="text-align: right;margin-top:20px ">
-                    <button class="btn btn-info" id=post>提交</button>
+                    <button class="btn btn-info" id=post>竞猜</button>
             </div>
 
+                <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                 <span class="label">分隔符</span>
+                                <div class="list-group">
+                                    <a class="list-group-item active">查询竞猜比赛</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="input-group col-md-3" style="margin-top:20p;margin-left:20px">
+                    <input type="text" class="form-control" placeholder="请输入竞猜比赛" id=search_title />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-search" id=search>查找</button>
+
+                    </span>
+                </div>
 
         </div>
 </body>
@@ -133,8 +134,8 @@
             }
             console.log(result);
             result = JSON.parse(result);
-            $("#title").text("比赛结果，胜利者：" + result.title);
-            $('#content').text("比赛比分：        " + result.content);
+            $("#title").text("竞猜比赛：  " + result.title);
+            $('#content').text("比赛结果：  " + result.content);
             $('#author').text("竞猜者：" + result.author);
         }).catch(function (err) {
             console.log("error :" + err.message);
